@@ -1,7 +1,7 @@
 ﻿using Veterinary.API.Data;
-using Owner.Shared.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Veterinary.Shared.Entities;
 
 namespace Veterinary.API.Controllers
 {
@@ -70,3 +70,4 @@ namespace Veterinary.API.Controllers
 
         }
     }
+}

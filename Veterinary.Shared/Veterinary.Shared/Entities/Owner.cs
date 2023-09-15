@@ -14,6 +14,8 @@ namespace Veterinary.Shared.Entities
 
         [Required(ErrorMessage = "El documento es requerido")]
 
+        [MaxLength(13)]
+
         public string Document { get; set; } = null;
         public string FirstName { get; set; } = null;
 

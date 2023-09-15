@@ -1,0 +1,32 @@
+﻿@page "/owners"
+@using Veterinary.Shared.Entities;
+@using Veterinary.WEB.Repositories;
+
+@inject IRepository repository
+
+<h3>OwnersIndex</h3>
+
+<div class="mb-3"> 
+
+    <a class="btn btn-primary" href="/owners/create"> New Owner</a>
+
+</div>
+
+
+
+@code {
+
+    public List<Owner>? Owners { get; set; }
+
+    protected async override Task OnInitializeAsync()
+    {
+
+        var responseHttp = await repository.Get<List<Owner>>("/api/owners");
+        Owners = responseHttp.Response!;
+
+    }
+
+
+
+
+}
